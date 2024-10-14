@@ -276,7 +276,7 @@ const zkBitcoinABI = [
   return new ethers.Contract(MINTER_ADDRESS, zkBitcoinABI, wallet);
 }
 interface Config {
-  privateKey: string;
+  privateKey: sretryMaintring;
   minerAddress: string;
   contractAddress: string;
   contractAddressPayMaster: string;
@@ -687,6 +687,10 @@ var transactionHashz;
 	 if(attempt%5==0){
 	     console.log("We are awaiting more solutions to pile up to send in, everything is working");
 	}
+				// to prevent infinite loop
+				 if(attempt > 250){
+					break;
+				}
 		//		 await sleep(1000); // Sleep for 2 seconds (2000 milliseconds)
 	  //console.log("Error contains 'Paymaster', Means Paymaster is out of ETH, please contact us on Discord");
 		// Checking if the error message contains the text 'minAmt'
@@ -778,6 +782,10 @@ var transactionHashz;
 			console.log("Too many answers at once use 1 less");
 			if(data2zzzz.length == 0 ){
 			 
+				var transactionHashzzz ="0x750207aedaaf9abb7d485de5bcdec289a7ab4a58dddd6bbddbed8089ec289111";
+				console.log(`Fake Transaction Hash to insert to miner to fix it: ${transactionHashzzz}`);
+				const filePathff = path.join(__dirname, '..', '..', 'transactionHash.txt');
+				fs.writeFileSync(filePathff, transactionHashzzz);
 				newNonces = false;
 				  data2zzzz = null;
 				data22Nonce= null;
@@ -796,6 +804,16 @@ var transactionHashz;
  // Slice the array to exclude the last 'x' elements
          data22Nonce=  data22Nonce.slice(0, -1); // Slice the array to exclude the last 'x' elements
 			console.log("Too many answers at once use 1 less");
+				if(data2zzzz.length == 0 ){
+					 
+						var transactionHashzzz ="0x750207aedaaf9abb7d485de5bcdec289a7ab4a58dddd6bbddbed8089ec289111";
+						console.log(`Fake Transaction Hash to insert to miner to fix it: ${transactionHashzzz}`);
+						const filePathff = path.join(__dirname, '..', '..', 'transactionHash.txt');
+						fs.writeFileSync(filePathff, transactionHashzzz);
+						newNonces = false;
+						  data2zzzz = null;
+						data22Nonce= null;
+				}
 		continue;
 	 }
 	 
