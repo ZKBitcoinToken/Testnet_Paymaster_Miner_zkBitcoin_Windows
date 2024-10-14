@@ -28,7 +28,7 @@ Also must fill in account and private key in _zkBitcoinMiner.conf file
 
 2) Below are the following arguments that may/need to be changed :
 
-2a) address=
+2a) minerAddress=
   - If omitted, you are not able to mine, a dummy account is the default with no funds.
   - Replace the value with your own mining Ethereum address (42 characters long including '0x' prefix, case-sensitive).
 
