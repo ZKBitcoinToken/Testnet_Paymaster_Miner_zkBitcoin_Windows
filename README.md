@@ -53,7 +53,8 @@ Also must fill in account and private key in _zkBitcoinMiner.conf file
   - Replace the value with your web3api as you desire.
 
 
-3) Save and run '_zkBitcoin Miner Start.bat file' in this directory.
+3) Run '_zkBitcoin Miner including PayMaster.bat' file in this directory to run miner + Paymaster, may need to run it twice for setup to work!
+3b) Run '_zkBitcoin Miner Start.bat' file in this directory to run normal miner
 
 ### Notes
 
