@@ -54,7 +54,8 @@ Also must fill in account and private key in _zkBitcoinMiner.conf file
 
 
 3) Run '_zkBitcoin Miner including PayMaster.bat' file in this directory to run miner + Paymaster, may need to run it twice for setup to work!
-3b) Run '_zkBitcoin Miner Start.bat' file in this directory to run normal miner
+3b) Run '_zkBitcoin Miner Start no PayMaster.bat' file in this directory to run normal miner with no paymaster!
+###  may need to run the .bat twice for setup to work!
 
 ### Notes
 
